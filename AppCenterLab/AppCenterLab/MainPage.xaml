@@ -7,6 +7,10 @@
     <StackLayout>
         <Button Text="Click"
                 Clicked="Button_Clicked" />
+        <Button Text="Add"
+                Clicked="AddButton_Clicked" />
+        <Button Text="Read"
+                Clicked="ReadButton_Clicked" />
     </StackLayout>
 
 </ContentPage>
