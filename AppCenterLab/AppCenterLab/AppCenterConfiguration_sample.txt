@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace AppCenterLab
+{
+    public static class AppCenterConfiguration
+    {
+        public const string Android = "<your android app id>";
+        public const string iOS = "<your ios app id>";
+    }
+}
