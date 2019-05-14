@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Auth;
+using Microsoft.AppCenter.Crashes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,6 +19,18 @@ namespace AppCenterLab
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var user = await Auth.SignInAsync();
+                await DisplayAlert("User", $"{user.AccountId}", "Close");
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.AppCenterLab">
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
-    <application android:label="AppCenterLab.Android"></application>
+    <application android:label="AppCenterLab.Android">
+      <activity android:name="com.microsoft.identity.client.BrowserTabActivity">
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW" />
+
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+
+          <data
+              android:host="auth"
+              android:scheme="msalb1a4e6ce-f08f-47a3-b570-628a9831a654" />
+        </intent-filter>
+      </activity>
+    </application>
 </manifest>

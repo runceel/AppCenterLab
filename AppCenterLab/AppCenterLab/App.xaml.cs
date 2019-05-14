@@ -1,5 +1,6 @@
 ﻿using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Auth;
 using Microsoft.AppCenter.Crashes;
 using System;
 using Xamarin.Forms;
@@ -20,7 +21,7 @@ namespace AppCenterLab
         {
             AppCenter.Start($"android={AppCenterConfiguration.Android};" +
                   $"ios={AppCenterConfiguration.iOS}",
-                  typeof(Analytics), typeof(Crashes));
+                  typeof(Analytics), typeof(Crashes), typeof(Auth));
         }
 
         protected override void OnSleep()
